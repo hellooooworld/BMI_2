@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -22,26 +23,30 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="Banner" translatesAutoresizingMaskIntoConstraints="NO" id="Iu1-I3-4fz">
                                 <rect key="frame" x="0.0" y="-169" width="676" height="169"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" secondItem="Iu1-I3-4fz" secondAttribute="height" multiplier="200:49" id="0aa-lo-quX"/>
                                     <constraint firstAttribute="width" secondItem="Iu1-I3-4fz" secondAttribute="height" multiplier="4:1" id="NzX-lG-Bdb"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="0aa-lo-quX"/>
                                         <exclude reference="NzX-lG-Bdb"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="4" y="0.0" width="711" height="178"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="NzX-lG-Bdb"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="800" height="196"/>
+                                    <mask key="constraints">
+                                        <include reference="0aa-lo-quX"/>
                                     </mask>
                                 </variation>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PGn-o5-d6D">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" red="0.68584806866810011" green="1" blue="0.94702101487032531" alpha="1" colorSpace="calibratedRGB"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="4" y="180" width="392" height="620"/>
-                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -70,6 +75,21 @@
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Iu1-I3-4fz"/>
+                                <include reference="PGn-o5-d6D"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="3g6-As-OeZ"/>
+                                <include reference="8hf-Vv-uIp"/>
+                                <include reference="ZHX-bJ-ZU0"/>
+                                <include reference="C5N-IJ-mBB"/>
+                                <include reference="NdV-6L-cbE"/>
+                                <include reference="n3Q-oV-cOw"/>
+                                <include reference="010-gI-J9F"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
                             <mask key="subviews">
                                 <include reference="Iu1-I3-4fz"/>
                                 <include reference="PGn-o5-d6D"/>
